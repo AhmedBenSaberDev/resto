@@ -18,3 +18,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('booking', 'BookingController')->middleware('auth');
+
+
+Route::get('admin/dashboard','AdminController@index')->name('admin.dashboard')->middleware('isAdmin');
